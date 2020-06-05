@@ -25,7 +25,8 @@ test('ContactForm adds new contact info', async () => {
     expect(emailInput.value).toBe('karen@karen.com')
     expect(messageInput.value).toBe('hello')
 
-    // const newContact = screen.getByText(/karen/i);
+    const newContact = screen.findByText(/karen/i);
+    expect(newContact).toBeInTheDocument
 
 })
 })
